@@ -1,0 +1,378 @@
+/*Import Raleway font*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,600');
+
+html, body {
+    color: #333333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+}
+
+.links {
+    width: 420px;
+    margin: auto;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.top-content {
+    height: 600px;
+    background-image: url('../../public/image/home-background.jpg');
+    background-size: cover;
+}
+
+/*header*/
+
+.header {
+    color: #fff;
+    font-size: 130%;
+    height: 100px;
+    width: 100%;
+}
+
+.header_alexa {
+    background-color: #333333;
+    color: #fff;
+    font-size: 130%;
+    height: 100px;
+    width: 100%;
+}
+
+.alexa_parsing {
+    float: left;
+    height: 26px;
+    margin: 37px 800px 37px 250px;
+}
+
+.alexa_parsing > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logout_button {
+    width: 120px;
+    margin: 35px;
+    float: left;
+    background-color: #fff;
+    text-align: center;
+}
+
+.logout_button > a {
+    color: #333333;
+    display: block;
+    line-height: 30px;
+    text-decoration: none;
+    width: 120px;
+    height: 30px;
+    font-size: 70%;
+    border: none;
+    background-color: #fff;
+}
+
+.logout_button > a:hover {
+    cursor: pointer;
+    background-color: #4498bf;
+    color: #fff;
+}
+
+/*Main content*/
+
+.search {
+    width: 470px;
+    margin: 225px auto;
+}
+
+.search > form > .input_text {
+    height: 48px;
+    width: 370px;
+    padding-left: 20px;
+    border: none;
+    position: absolute;
+}
+
+.search > form > .input_submit {
+    background-color: #4498bf;
+    color: #fff;
+    font-size: 85%;
+    width: 80px;
+    height: 50px;
+    position: relative;
+    left: 390px;
+    border: none;
+}
+
+    /*Bottom Content*/
+
+.bottom_content {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 500px;
+}
+
+.bottom_content_wrapper {
+    width: 810px;
+    min-height: 500px;
+    margin: auto;
+}
+
+.bottom_content_wrapper > div {
+    text-align: center;
+    float: left;
+    margin: 100px 30px 40px 30px;
+    width: 210px;
+}
+
+.bottom_content_wrapper > div > button {
+    background-color: #4498bf;
+    color: #FFF;
+    font-size: 85%;
+    width: 80px;
+    height: 40px;
+    border: none;
+}
+
+/*Footer*/
+
+.footer {
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 20px;
+}
+
+    /*Alexa main content*/
+
+.content > .alexa_main_content > .error_domain {
+    border: solid 1px #880000;
+    background-color: rgba(255, 0, 0, 0.3);
+    color: #880000;
+    width: 350px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin: 30px auto 0;
+}
+
+ .alexa_main_content_top {
+    width: 900px;
+    height: 500px;
+    margin: 30px auto 20px auto;
+}
+
+.alexa_main_content_top > .country_left {
+    float: left;
+    width: 500px;
+}
+
+.alexa_main_content_top > .country_left > h4 {
+    border-bottom: solid 1px #636b6f;
+}
+
+.alexa_main_content_top > .country_left > #regions_div {
+    width: 500px;
+    height: 300px;
+}
+
+.alexa_main_content_top > .country_right {
+    margin-top: 60px;
+    width: 400px;
+    text-align: center;
+    float: right;
+}
+
+.alexa_main_content_top > .country_right > h4 {
+    margin: 30px 0 0 0;
+}
+
+.alexa_main_content_top > .country_right > span {
+    font-size: 300%;
+}
+
+.alexa_main_content_bottom {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.alexa_main_content_bottom > table {
+    border-collapse: collapse;
+    border: none;
+    border-spacing: 0;
+}
+
+tr {
+    border-bottom: 1px solid #636b6f;
+}
+
+th, td {
+    width: 125px;
+    padding: 13px 20px 5px 20px;
+    text-align: center;
+}
+
+/*login*/
+
+.left_block {
+    float: left;
+    width: 30%;
+    height: 900px;
+    background-color: #333333;
+}
+
+.right_block {
+    color: #636b6f;
+    float: right;
+    width: 70%;
+    height: 900px;
+    background-color: #f5f5f5;
+}
+
+.login_title {
+    font-size: 150%;
+    padding-top: 350px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.login_form {
+    height: 170px;
+    background-color: #fff;
+}
+
+.login_form > form {
+    padding-top: 15px;
+}
+
+.login_form > form > label {
+    display: block;
+    margin: 10px auto;
+    width: 340px;
+}
+
+.login_form > form > #email_label {
+    margin: 10px 364px;
+}
+
+.login_form > form > label > input {
+    margin: 0 10px;
+    width: 229px;
+    height: 20px;
+    border: solid 2px #f5f5f5;
+}
+
+.login_button {
+    border: none;
+    width: 100px;
+    height: 32px;
+    background-color: #fff;
+    font-size: 180%;
+    padding: 0;
+    text-transform: uppercase;
+    color: #4498bf;
+    margin: 0 0 0 560px;
+}
+
+.registration_link {
+    border-bottom: solid 2px #636b6f;
+    padding: 5px;
+}
+
+.registration_link > a {
+    text-decoration: none;
+    font-size: 150%;
+    margin: 50px;
+}
+
+.registration_link > a:hover {
+    cursor: pointer;
+}
+
+/*register*/
+
+.register_title {
+    font-size: 150%;
+    padding-top: 350px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.register_form {
+    height: 220px;
+    background-color: #fff;
+}
+
+.register_form > form {
+    padding-top: 15px;
+}
+
+.register_form > form > label {
+    display: block;
+    margin: 10px auto;
+    width: 400px;
+}
+
+.register_form > form > #email_label {
+    margin: 10px 364px;
+}
+
+.register_form > form >#username_label {
+    margin: 10px 328px;
+}
+
+.register_form > form >#password_label {
+    margin: 10px 333px;
+}
+
+.register_form > form >#confirm_password_label {
+    margin: 10px 271px;
+}
+
+.register_form > form > label > input {
+    margin: 0 10px;
+    width: 229px;
+    height: 20px;
+    border: solid 2px #f5f5f5;
+}
+
+.register_button {
+    border: none;
+    width: 100px;
+    height: 32px;
+    background-color: #fff;
+    font-size: 180%;
+    padding: 0;
+    text-transform: uppercase;
+    color: #4498bf;
+    margin: 0 0 0 524px;
+}
+
+.login_link {
+    border-bottom: solid 2px #636b6f;
+    padding: 5px;
+}
+
+.login_link > a {
+    text-decoration: none;
+    font-size: 150%;
+    margin: 50px;
+}
+
+.login_link > a:hover {
+    cursor: pointer;
+}
