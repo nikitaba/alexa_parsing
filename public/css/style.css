@@ -35,7 +35,7 @@ button:hover {
 
 .top-content {
     height: 600px;
-    background-image: url('../../public/image/home-background.jpg');
+    background-image: url('/image/home-background.jpg');
     background-size: cover;
 }
 
@@ -115,11 +115,17 @@ button:hover {
     width: 80px;
     height: 50px;
     position: relative;
-    left: 390px;
+    left: 391px;
+    padding: 0;
     border: none;
 }
 
-    /*Bottom Content*/
+.search > form > .input_submit:focus {
+    outline: none;
+}
+
+
+/*Bottom Content*/
 
 .bottom_content {
     background-color: #f5f5f5;
@@ -157,7 +163,7 @@ button:hover {
     padding-bottom: 20px;
 }
 
-    /*Alexa main content*/
+/*Alexa main content*/
 
 .content > .alexa_main_content > .error_domain {
     border: solid 1px #880000;
@@ -170,7 +176,7 @@ button:hover {
     margin: 30px auto 0;
 }
 
- .alexa_main_content_top {
+.alexa_main_content_top {
     width: 900px;
     height: 500px;
     margin: 30px auto 20px auto;

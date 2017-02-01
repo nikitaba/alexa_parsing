@@ -25,6 +25,7 @@ class AlexaController extends Controller
     public function index(Request $request)
     {
 
+        //Убираем протокол https
         $request->domain = preg_replace('#^https?://#', '', $request->domain);
 
         //Добавляем http:// чтобы легче было распарсить URL и получить домен
@@ -32,16 +33,20 @@ class AlexaController extends Controller
             $request->domain = 'http://'.$request->domain;
         }
 
+        //Парсим URL
         $urlParts = parse_url($request->domain);
 
+        //Записываем в $request->domain только значение домен $urlParts['host']
         if (array_key_exists('host', $urlParts)) {
             $request->domain = preg_replace('/^www\./', '', $urlParts['host']);
         }
 
+        //Валидируем полученное значение домена
         if(!preg_match("/^([-a-z0-9]{2,100})\.([a-z\.]{2,8})$/i", $request->domain)) {
             return redirect()->action('HomeController@index');
         }
 
+        //Парсим http://www.alexa.com/siteinfo/
         require (app_path() .'/simplehtmldom/simple_html_dom.php');
 
         $html = file_get_html('http://www.alexa.com/siteinfo/'.$request->domain);
