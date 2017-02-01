@@ -11,8 +11,9 @@
                 @include('common.header')
             </div>
             <div class="search">
-                <form method="get" action="{{ url('/alexa/') }}">
-                    <input class="input_text" type="text" name="domain" placeholder="Insert domain: domain.com">
+                <form id="myForm" method="post"> {{--Action is defined by JS function at the bottom--}}
+                    {{ csrf_field() }}
+                    <input class="input_text" id="input_text" type="text" name="domain" placeholder="Insert domain: domain.com">
                     <button class="input_submit">Check</button>
                 </form>
             </div>
@@ -43,4 +44,13 @@
 
         @include('common.footer')
     </div>
+    <script src="/../../public/js/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('#myForm').submit(function(){
+                var domain = $('#input_text').val();
+                $(this).attr('action', "alexa/" + domain);
+            });
+        });
+    </script>
 @endsection
