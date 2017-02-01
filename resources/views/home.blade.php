@@ -48,7 +48,8 @@
     <script>
         $(function() {
             $('#myForm').submit(function(){
-                var domain = $('#input_text').val();
+                var url = $('#input_text').val();
+                var domain = url.replace('http://','').replace('https://','').split(/[/?#]/)[0];
                 $(this).attr('action', "alexa/" + domain);
             });
         });

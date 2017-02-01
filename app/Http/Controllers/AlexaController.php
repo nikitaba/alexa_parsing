@@ -25,6 +25,9 @@ class AlexaController extends Controller
     public function index(Request $request)
     {
 
+        $request->domain = preg_replace('#^https?://#', '', $request->domain);
+
+        //Добавляем http:// чтобы легче было распарсить URL и получить домен
         if (strpos($request->domain, 'http://') === false) {
             $request->domain = 'http://'.$request->domain;
         }
@@ -36,7 +39,6 @@ class AlexaController extends Controller
         }
 
         if(!preg_match("/^([-a-z0-9]{2,100})\.([a-z\.]{2,8})$/i", $request->domain)) {
-//            die('die');
             return redirect()->action('HomeController@index');
         }
 
