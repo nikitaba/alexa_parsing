@@ -49,7 +49,7 @@
         $(function() {
             $('#myForm').submit(function(){
                 var url = $('#input_text').val();
-                var domain = url.replace('http://','').replace('https://','').split(/[/?#]/)[0];
+                var domain = url.replace('http://','').replace('https://','').replace(/^[^.]+\./g, '').split(/[/?#]/)[0];
                 $(this).attr('action', "alexa/" + domain);
             });
         });
