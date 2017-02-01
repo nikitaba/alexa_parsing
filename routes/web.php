@@ -16,5 +16,6 @@ Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::any('/alexa/', 'AlexaController@index');
 
-Route::any('/alexa/{domain}', 'AlexaController@index'); //http://linkfortest.xyz/alexa/domain
+Route::any('/alexa/{domain}', 'AlexaController@index');
