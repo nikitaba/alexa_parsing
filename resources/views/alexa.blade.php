@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('title')
-    Alexa {{!empty($data) ? $data['domain'] : '' }}
+    {{!empty($data) ? $data['domain'] : '' }} - Alexa Parsing
 @endsection
 
 @section('content')
